@@ -1,4 +1,6 @@
-@extends('layoutall')
+@extends('userlayout')
 
 
-<h1>Logged In!</h1>
+@section('usercontent')
+	<h1>Logged In!</h1>
+@stop

@@ -7,3 +7,13 @@
 	width: inherit;
 	padding:0 10px;
 }
+
+.menu-button{
+	width: 100%;
+	margin-bottom: 6px;
+}
+
+.menu-profile-image{
+	width: 100%;
+	margin-bottom: 30px;
+}

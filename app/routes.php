@@ -28,4 +28,14 @@ Route::get('/register', function()
 	return View::make('register');
 });
 
+Route::post('/login', function()
+{
+	$credentials = Input::only('email', 'password');
+	if (Auth::attempt($credentials)) {
+		return Redirect::intended('/');
+	}
+	return Redirect::to('login');
+});
+
+
 Route::post('/register', 'UserController@register');
