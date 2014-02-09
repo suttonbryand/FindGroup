@@ -6,10 +6,11 @@
 		<div class="row">
 			<div class="col-md-2">
 				<div>
+					<h1> {{ $user->username }} </h1>
 					<div><img src="{{ asset('images/profiles/noimage.png') }}" class="menu-profile-image"/></div>
-					<div><button class="btn btn-primary menu-button">Dashboard</button></div>
-					<div><button class="btn btn-primary menu-button">Look For Groups</button></div>
-					<div><button class="btn btn-primary menu-button">Logout</button></div>
+					<div><a href="{{ url('/dashboard') }}"><button class="btn btn-primary menu-button">Dashboard</button></a></div>
+					<div><a href="{{ url('/searchgroups') }}"><button class="btn btn-primary menu-button">Look For Groups</button></a></div>
+					<div><a href="{{ url('/logout') }}"><button class="btn btn-primary menu-button">Logout</button></a></div>
 				</div>
 
 			</div>

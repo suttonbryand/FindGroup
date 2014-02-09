@@ -14,8 +14,18 @@
 Route::group(array('before' => 'auth'), function(){
 	Route::get('/', function()
 	{
-		return View::make('searchgroups');
+		return Redirect::to('/searchgroups');
 	});
+
+	Route::get('/dashboard','UserController@dashboard');
+
+	Route::get('/searchgroups', function()
+	{
+		$user = Auth::getUser();
+		return View::make('searchgroups',compact('user'));
+	});
+
+	Route::get('/logout', 'UserController@logout');
 });
 
 Route::get('/login', function()

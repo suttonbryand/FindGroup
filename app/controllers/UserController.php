@@ -14,6 +14,16 @@ class UserController extends BaseController {
 
 	}
 
+	public function dashboard(){
+		$user = Auth::getUser();
+		return View::make('dashboard',compact('user'));
+	}
+
+	public function logout(){
+		Auth::logout();
+		return View::make('login');
+	}
+
 }
 
 ?>
