@@ -11,7 +11,17 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
-		// $this->call('UserTableSeeder');
+		 $this->call('GameDataBaseSeeder');
 	}
 
+}
+
+class GameDataBaseSeeder extends Seeder{
+
+	public function run()
+	{
+		Game::create(array('gamename' => 'BioShock Infinite'));
+		Game::create(array('gamename' => 'Battlefield 3'));
+		Game::create(array('gamename' => 'Team Fortess 2'));
+	}
 }
