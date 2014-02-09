@@ -11,7 +11,14 @@
 |
 */
 
-Route::get('/', function()
+Route::group(array('before' => 'auth'), function(){
+	Route::get('/', function()
+	{
+		return View::make('searchgroups');
+	});
+});
+
+Route::get('/login', function()
 {
 	return View::make('login');
 });
@@ -20,3 +27,5 @@ Route::get('/register', function()
 {
 	return View::make('register');
 });
+
+Route::post('/register', 'UserController@register');
