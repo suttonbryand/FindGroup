@@ -26,6 +26,7 @@ Route::group(array('before' => 'auth'), function(){
 	});
 
 	Route::get('/creategroup', 'GroupController@createGroup');
+	Route::get('/creategroup/{id}', 'GroupController@createGroup');
 
 	Route::get('/logout', 'UserController@logout');
 });

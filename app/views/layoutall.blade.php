@@ -1,7 +1,7 @@
 <html>
 
 	<head>
-		<title>Login</title>
+		<title>Find Group</title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 

@@ -2,10 +2,17 @@
 
 class GroupController extends BaseController {
 
-	public function createGroup(){
-		$games = Game::all();
+	public function createGroup($id = -1){
 		$user = Auth::getUser();
-		return View::make('creategroup', compact('games','user'));
+		if($id == -1){
+			$games = Game::all();
+			$searching = true;
+		}
+		else{
+			$games = Game::find($id);
+			$searching = false;
+		}
+		return View::make('creategroup', compact('games','user','searching'));
 	}
 }
 ?>

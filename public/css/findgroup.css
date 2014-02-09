@@ -24,7 +24,25 @@
 	margin-bottom:10px;
 }
 
+.game-image:hover{
+	border-color: rgb(102, 175, 233);
+	outline: 0px none;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);	
+}
+
 .game-selection{
 	float:left;
 	padding-left: 4px;
+}
+
+.create-group-input{
+	position:relative;
+	top: 30px;
+}
+
+.create-group-input > form > input,
+.create-group-input > form > select
+{
+	width: 40%;
+	margin: 8px;
 }
