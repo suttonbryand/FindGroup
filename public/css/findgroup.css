@@ -17,3 +17,14 @@
 	width: 100%;
 	margin-bottom: 30px;
 }
+
+.game-image{
+	width: 250px;
+	height: 370px;
+	margin-bottom:10px;
+}
+
+.game-selection{
+	float:left;
+	padding-left: 4px;
+}

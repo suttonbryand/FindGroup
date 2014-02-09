@@ -25,6 +25,8 @@ Route::group(array('before' => 'auth'), function(){
 		return View::make('searchgroups',compact('user'));
 	});
 
+	Route::get('/creategroup', 'GroupController@createGroup');
+
 	Route::get('/logout', 'UserController@logout');
 });
 
