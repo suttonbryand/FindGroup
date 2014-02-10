@@ -38,6 +38,13 @@ Route::filter('auth', function()
 	if (Auth::guest()) return Redirect::guest('login');
 });
 
+Route::filter('admin', function()
+{
+	$email = Auth::getUser()->email;
+	if($email != "sutton.bryand@gmail.com")
+		return Redirect::to('/');
+});
+
 
 Route::filter('auth.basic', function()
 {

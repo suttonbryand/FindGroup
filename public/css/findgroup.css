@@ -46,3 +46,9 @@
 	width: 40%;
 	margin: 8px;
 }
+
+.text-about{
+	width: 100%;
+	min-height: 200px;
+	margin-bottom: 30px;
+}

@@ -18,6 +18,7 @@ class CreateUserTable extends Migration {
 			$table->string('username', 128)->unique();
 			$table->string('password', 60);
 			$table->string('email', 150)->unique();
+			$table->text('about');
 			$table->timestamps();
 		});
 
@@ -36,6 +37,7 @@ class CreateUserTable extends Migration {
 			$table->foreign('user_created_id')->references('id')->on('users');
 			$table->integer('game_id')->unsigned();
 			$table->foreign('game_id')->references('id')->on('games');
+			$table->integer('max_players');
 			$table->timestamps();
 		});
 

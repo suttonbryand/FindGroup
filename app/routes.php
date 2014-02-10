@@ -29,6 +29,20 @@ Route::group(array('before' => 'auth'), function(){
 	Route::get('/creategroup/{id}', 'GroupController@createGroup');
 
 	Route::get('/logout', 'UserController@logout');
+
+	Route::post('/edituser', 'UserController@edit');
+
+	Route::get('/alterTables', array(
+		"before" => "admin",
+		function()
+		{
+			Schema::table('users',function($table)
+			{
+				$table->text('about');
+			});
+			return Response::make('Done',200);
+		}
+	));
 });
 
 Route::get('/login', function()
