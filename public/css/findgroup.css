@@ -1,3 +1,7 @@
+body{
+	font-family: 'Alef',Arial;
+}
+
 .login-fieldset{
 	border: 1px solid blue;
 	padding: 16px;
@@ -16,6 +20,7 @@
 .menu-profile-image{
 	width: 100%;
 	margin-bottom: 30px;
+	cursor: pointer;
 }
 
 .game-image{
@@ -24,7 +29,8 @@
 	margin-bottom:10px;
 }
 
-.game-image:hover{
+.game-image:hover,
+.menu-profile-image:hover{
 	border-color: rgb(102, 175, 233);
 	outline: 0px none;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);	
@@ -51,4 +57,10 @@
 	width: 100%;
 	min-height: 200px;
 	margin-bottom: 30px;
+}
+
+.notification{
+	display: block;
+	width: 200px;
+	margin: 0 auto;
 }

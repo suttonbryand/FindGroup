@@ -14,7 +14,7 @@
 Route::group(array('before' => 'auth'), function(){
 	Route::get('/', function()
 	{
-		return Redirect::to('/searchgroups');
+		return Redirect::to('/dashboard');
 	});
 
 	Route::get('/dashboard','UserController@dashboard');
@@ -32,13 +32,15 @@ Route::group(array('before' => 'auth'), function(){
 
 	Route::post('/edituser', 'UserController@edit');
 
+	Route::post('/uploadprofilepic', 'UserController@uploadProfilePic');
+
 	Route::get('/alterTables', array(
 		"before" => "admin",
 		function()
 		{
 			Schema::table('users',function($table)
 			{
-				$table->text('about');
+				$table->string('profile_image',50)->default('noimage.png');
 			});
 			return Response::make('Done',200);
 		}

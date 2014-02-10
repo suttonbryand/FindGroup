@@ -39,6 +39,15 @@ class UserController extends BaseController {
 		return View::make('login');
 	}
 
+	public function uploadProfilePic(){
+		$user = Auth::getUser();
+		$img = Input::file('img');
+		$user->profile_image = $user->id . '.' . $img->getClientOriginalExtension();
+		$result = $img->move("public/images/profiles/", $user->id . '.' . $img->getClientOriginalExtension()) && $user->save();
+		$result = '1';
+		return Redirect::to('/dashboard');
+	}
+
 }
 
 ?>

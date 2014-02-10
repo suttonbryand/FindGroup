@@ -7,7 +7,8 @@
 			<div class="col-md-2">
 				<div>
 					<h1> {{ $user->username }} </h1>
-					<div><img src="{{ asset('images/profiles/noimage.jpg') }}" class="menu-profile-image"/></div>
+					<div><img src="{{ asset('images/profiles/'. $user->profile_image) }}" onclick="$('#uploadPhotoModal').modal()" class="menu-profile-image"/></div>
+					<div><a href="{{ url('/dashboard') }}"><button class="btn btn-primary menu-button">Profile</button></a></div>
 					<div><a href="{{ url('/dashboard') }}"><button class="btn btn-primary menu-button">Dashboard</button></a></div>
 					<div><a href="{{ url('/creategroup') }}"><button class="btn btn-primary menu-button">Create Group</button></a></div>
 					<div><a href="{{ url('/searchgroups') }}"><button class="btn btn-primary menu-button">Look For Groups</button></a></div>
