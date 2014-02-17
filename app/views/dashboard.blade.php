@@ -4,17 +4,24 @@
 
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<h1 class="panel-title">My Groups</h1>
+			<h1 class="panel-title">My Parties</h1>
 		</div>
 		<div class="panel-body">
 		</div>
 		<div class="panel-footer">
-			<a href=" {{ url('/creategroup') }} "><button class="btn btn-primary">Create Group</button></a>
+			<a href=" {{ url('/createparty') }} "><button class="btn btn-primary">Create Party</button></a>
 		</div>
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<h1 class="panel-title">Groups I've Joined</h1>
+			<h1 class="panel-title">Parties I've Joined</h1>
+		</div>
+		<div class="panel-body">
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h1 class="panel-title">Friends</h1>
 		</div>
 		<div class="panel-body">
 		</div>

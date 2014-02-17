@@ -48,6 +48,11 @@ class UserController extends BaseController {
 		return Redirect::to('/dashboard');
 	}
 
+	public function profile($id){
+		$user = User::find($id);
+		return View::make('profile', compact('user'));
+	}
+
 }
 
 ?>

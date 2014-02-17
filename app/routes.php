@@ -19,33 +19,35 @@ Route::group(array('before' => 'auth'), function(){
 
 	Route::get('/dashboard','UserController@dashboard');
 
-	Route::get('/searchgroups', function()
-	{
-		$user = Auth::getUser();
-		return View::make('searchgroups',compact('user'));
-	});
+	Route::get('/searchparties', 'PartyController@searchParties');
 
-	Route::get('/creategroup', 'GroupController@createGroup');
-	Route::get('/creategroup/{id}', 'GroupController@createGroup');
+	Route::get('/createparty', 'PartyController@createParty');
+	Route::get('/createparty/{id}', 'PartyController@createParty');
 
 	Route::get('/logout', 'UserController@logout');
+
+	Route::get('/party/{id}', 'PartyController@partyPage');
 
 	Route::post('/edituser', 'UserController@edit');
 
 	Route::post('/uploadprofilepic', 'UserController@uploadProfilePic');
 
+	Route::post('/createparty', 'PartyController@insertParty');
+
 	Route::get('/alterTables', array(
 		"before" => "admin",
 		function()
 		{
-			Schema::table('users',function($table)
+			Schema::table('parties',function($table)
 			{
-				$table->string('profile_image',50)->default('noimage.png');
+				$table->string('description',50);
 			});
 			return Response::make('Done',200);
 		}
 	));
 });
+
+Route::get('/profile/{pid}', 'UserController@profile');
 
 Route::get('/login', function()
 {

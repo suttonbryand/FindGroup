@@ -23,9 +23,9 @@ class GameDataBaseSeeder extends Seeder{
 		Game::create(array('gamename' => 'BioShock Infinite'));
 		Game::create(array('gamename' => 'Battlefield 3'));
 		Game::create(array('gamename' => 'Team Fortess 2'));
-		//Game::create(array('gamename' => 'Battlefield 4'));
-		//Game::create(array('gamename' => 'Counter Strike Global Offensive'));
-		//Game::create(array('gamename' => 'League of Legends'));
-		//Game::create(array('gamename' => 'Minecraft'));
+		Game::create(array('gamename' => 'Battlefield 4'));
+		Game::create(array('gamename' => 'Counter Strike Global Offensive'));
+		Game::create(array('gamename' => 'League of Legends'));
+		Game::create(array('gamename' => 'Minecraft'));
 	}
 }

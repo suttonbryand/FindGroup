@@ -26,5 +26,9 @@ class Game extends Eloquent {
 		return $this->getKey();
 	}
 
+	public function groups(){
+		$this->belongsToMany('Group');
+	}
+
 
 }
